@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+/* Navbar */
+.nav-item a:hover {
+  color: #509e2f;
+}
+
+/* Hero Section */
+
+.hero-section {
+  width: 100vw;
+  margin-top: 2rem;
+}
+.hero-content {
+  line-height: 2px;
+}
+.hero-content .trending {
+  color: #dc582a;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.hero-content h2 {
+  font-weight: 700;
+}
+.hero-section .image-container {
+  background: url("Assets/Rectangle\ 20.png");
+  width: 100%;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  position: relative;
+  overflow: none;
+}
+
+.hero-section .hero-content {
+  position: absolute;
+  top: 28%;
+  /* left: 8%;  */
+  left: 20%;
+  color: white;
+}
+
+/* Search Section */
+.search h2 {
+  margin-left: 1rem;
+  font: bold;
+  font-weight: 700;
+}
+
+.search .search-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+
+.search .search-input > div {
+  display: flex;
+  align-items: center;
+}
+.search .search-input .input {
+  width: 100vw;
+  min-width: fit-content;
+  padding: 5px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.search .search-input .input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.search .search-input .search-btn {
+  background-color: #509e2f;
+  padding: 7px 15px;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #fff;
+}
+
+.search .categories-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  white-space: nowrap;
+}
+
+.categories-tabs span {
+  margin-left: 2rem;
+}
+.all-recipes {
+  width: 200px;
+  height: 80px;
+  background-color: #eaaa00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.all-recipes:hover,
+.veg-recipes:hover,
+.non-veg-recipes:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
+  opacity: 88%;
+}
+.veg-recipes {
+  width: 200px;
+  height: 80px;
+  background-color: #c4d600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.non-veg-recipes {
+  width: 200px;
+  height: 80px;
+  background-color: #dc582a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Filter Recipes Section */
+.filtered-recipe-container {
+  width: 100vw;
+}
+.sidebar {
+  width: 20%;
+  max-width: fit-content;
+
+  padding: 1rem;
+}
+
+.recipes-list {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: flex-start;
+  gap: 2rem;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-list {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.recipe-card {
+  height: 380px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 15px;
+}
+.recipe-card:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+}
+
+.recipe-card img {
+  width: 100%; /* Ensure the image is responsive within the card */
+  height: 60%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.Rname {
+  font-weight: 900;
+}
+
+.recipe-card h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.recipe-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.like-button {
+  color: #dc582a;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+#time {
+  color: #dc582a;
+}
+
+/* Footer Section */
+
+.footer {
+  max-width: auto;
+  margin-top: 2rem;
+}
+.footer .footer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3.5rem;
+  padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+  color: rgb(12, 11, 11);
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-left: 2rem;
+}
+.footer-col .links {
+  margin-top: 20px;
+}
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .links li a {
+  text-decoration: none;
+  color: #3f3e3e;
+}
+.footer-col .links li a:hover {
+  color: #3f3d3d;
+  transform: scale(1.4);
+  transition: all 0.3s ease-in-out;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #3f3d3d;
+  max-width: 300px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: transparent;
+  color: #1a1919;
+  padding-left: 10px;
+}
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+.footer-col form button {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.footer-col form button:hover {
+  background: #292727;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #5c5c5e;
+}
+.footer-col .icons i:hover {
+  color: #474545;
+}
+.fa-brands {
+  width: 1rem;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background: rgba(228, 221, 221, 0.3);
+  }
+  .user-profile-img {
+    position: absolute;
+    top: 25px;
+    left: 75%;
+  }
+  .hero-section .image-container {
+    border-radius: 15px !important;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  .hero-section .hero-content {
+    position: absolute;
+    top: 28%;
+    /* left: 8%; laptop */
+    left: 15%;
+    color: white;
+  }
+  .categories-tabs {
+    flex-wrap: wrap;
+    font-display: flex-start;
+    justify-content: center;
+    margin-top: -1rem;
+  }
+
+  .sidebar {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: flex-start;
+    gap: 2rem;
+  }
+  .footer-col {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+    width: 80vw;
+  }
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+}
