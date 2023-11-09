@@ -206,18 +206,30 @@ body {
   font-size: 1rem;
   margin: 5px 0;
 }
-
-.like-button {
+.btns {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+.like-button:nth-child(1) {
+  background-color: white;
   color: #dc582a;
+}
+.like-button:nth-child(2) {
   border: none;
   padding: 5px 10px;
   font-size: 1rem;
-  cursor: pointer;
   background: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 #time {
   color: #dc582a;
+}
+
+.fav {
+  /* background: #dc582a; */
 }
 
 /* Footer Section */

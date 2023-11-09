@@ -4,7 +4,6 @@ const checkbox2 = document.querySelector("#below4");
 const all = document.querySelector("#All");
 const veg = document.querySelector("#Veg");
 const nonVeg = document.querySelector("#Non-Veg");
-const likes = document.querySelectorAll(".likes")
 
 const recipes = [
   // The recipe objects you provided go here
@@ -134,35 +133,34 @@ function renderRecipes(recipes) {
   const recipeList = document.querySelector(".recipes-list");
   recipeList.innerHTML = "";
 
-  recipes.map((recipe, index) => {
+  recipes.forEach((recipe, index) => {
     const card = document.createElement("div");
     card.classList.add("recipe-card");
 
     card.innerHTML = `
-        
-        <img src="${recipe.imageSrc}" alt="${recipe.name}">
-        <p> ${recipe.type}</p>
-        <div class="d-flex align-items-center justify-content-between gap-2 ">
-            <h4 style="font-size: 22px;" class="Rname">${recipe.name}</h4>
-            <p>⭐ ${recipe.rating}</p>
-        </div>
-        
-        <div  class="d-flex align-items-center justify-content-between" id="time">
-            <p>${recipe.time}</p>
-            <button class="like-button" data-index="${index}">
-            <span class="material-symbols-outlined" class="likes">
-            favorite
-            </span>
-            <span class="material-symbols-outlined">
-            mode_comment
-            </span>
-            
-            </button>
-
-        </div>
-        `;
+      <img src="${recipe.imageSrc}" alt="${recipe.name}">
+      <p>${recipe.type}</p>
+      <div class="d-flex align-items-center justify-content-between gap-2">
+        <h4 style="font-size: 22px;" class="Rname">${recipe.name}</h4>
+        <p>⭐ ${recipe.rating}</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-between" id="time">
+        <p>${recipe.time}</p>
+        <button class="btns like-button " data-index="${index}">
+        <span  class="material-symbols-outlined  ">favorite</span>
+       
+          <span style="color:black"class="material-symbols-outlined">mode_comment</span>
+        </button>
+      </div>
+    `;
 
     recipeList.appendChild(card);
+
+    // Adding event listener to the like button
+    const likeButton = card.querySelector(".like-button");
+    likeButton.addEventListener("click", () => {
+      updateLike(index);
+    });
   });
 }
 
@@ -198,15 +196,12 @@ checkbox2.addEventListener("click", () => {
   renderRecipes(filteredRecipes);
 });
 
-let isLiked = false;
-likes.addEventListener("click",()=>{
+function updateLike(index) {
+  // Your logic for updating the like status and visual representation
+  const likedRecipe = recipes[index];
+  likedRecipe.isLiked = !likedRecipe.isLiked;
 
-    isLiked = !isLiked;
-    updateLike();
-})
-
-function updateLike(){
-   recipes.forEach((resp)=>{
-    console.log(resp.isLiked)
-   })
+  // Add your code to visually represent the like status, e.g., changing button color
+  const likeButton = document.querySelector(`[data-index="${index}"]`);
+  likeButton.style.color = likedRecipe.isLiked ? "red" : "black";
 }
