@@ -158,7 +158,8 @@ function renderRecipes(recipes) {
 
     // Adding event listener to the like button
     const likeButton = card.querySelector(".like-button");
-    likeButton.addEventListener("click", () => {
+    likeButton.addEventListener("click", (e) => {
+      e.stopPropagation();
       updateLike(index);
     });
   });
