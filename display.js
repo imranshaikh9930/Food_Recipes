@@ -144,14 +144,27 @@ function renderRecipes(recipes) {
         <h4 style="font-size: 22px;" class="Rname">${recipe.name}</h4>
         <p>⭐ ${recipe.rating}</p>
       </div>
+      <div class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center justify-content-between" id="time">
-        <p>${recipe.time}</p>
-        <button class="btns like-button " data-index="${index}">
-        <span  class="material-symbols-outlined  ">favorite</span>
-       
-          <span style="color:black"class="material-symbols-outlined">mode_comment</span>
-        </button>
+      <p>${recipe.time}</p>
       </div>
+
+      <div>
+      
+      <button class="btns like-button" data-index="${index}">
+      <span  class="material-symbols-outlined  ">favorite</span>
+      </button>
+
+      <button class="btns like-button " >
+      <span style="color:black"class="material-symbols-outlined">mode_comment</span>
+      </button>
+
+      </div>
+      </div>
+     
+       
+       
+     
     `;
 
     recipeList.appendChild(card);

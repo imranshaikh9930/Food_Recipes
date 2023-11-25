@@ -221,11 +221,7 @@ body {
   background: transparent;
   border: none;
 }
-.like-button:nth-child(1) {
-  background-color: white;
-  color: #dc582a;
-  cursor: pointer;
-}
+
 
 #time {
   color: #dc582a;
