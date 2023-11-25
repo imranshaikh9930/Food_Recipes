@@ -48,7 +48,7 @@ body {
 .hero-section .hero-content {
   position: absolute;
   top: 28%;
-  left: 13%; 
+  left: 13%;
   /* left: 20%; */
   color: white;
 }
@@ -94,7 +94,6 @@ body {
   color: #fff;
 }
 
-
 .search .categories-tabs {
   display: flex;
   align-items: center;
@@ -116,7 +115,6 @@ body {
   color: white;
   border-radius: 10px;
   cursor: pointer;
-
 }
 .all-recipes:hover,
 .veg-recipes:hover,
@@ -127,7 +125,7 @@ body {
 }
 .all-recipes span,
 .veg-recipes span,
-.non-veg-recipes span{
+.non-veg-recipes span {
   margin-left: 1rem;
 }
 
@@ -154,7 +152,7 @@ body {
   cursor: pointer;
 }
 
-.right_arrow{
+.right_arrow {
   margin-left: 0rem;
 }
 
@@ -229,12 +227,9 @@ body {
   cursor: pointer;
 }
 
-
 #time {
   color: #dc582a;
 }
-
-
 
 /* Footer Section */
 
@@ -356,9 +351,9 @@ body {
     margin-top: -1rem;
   }
   .search-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .sidebar {
     width: fit-content;
@@ -367,7 +362,7 @@ body {
 
   .all-recipes span,
   .veg-recipes span,
-  .non-veg-recipes span{
+  .non-veg-recipes span {
     margin-left: 1rem;
   }
 
