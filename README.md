@@ -2,7 +2,6 @@
 
 https://imranshaikh9930foodrecipes.netlify.app/
 
-![Uploading Cookpal - Home.png…]()
 
 Recipes Array:
 
